@@ -16,7 +16,6 @@ import static org.testng.AssertJUnit.assertTrue;
 
 public class WebTableTests {
     WebDriver driver;
-
     @Before
     public void setup() throws Exception{
         System.setProperty("webdriver.gecko.driver", "C:\\Users\\mrx\\Documents\\Drivers\\firefox\\geckodriver\\geckodriver.exe");
@@ -85,7 +84,6 @@ public class WebTableTests {
 
         changeLastRecordButton.click();
 
-
         firstNameRegBox.sendKeys("Natalie");
         lastNameRegBox.sendKeys("Cole");
         emailRegBox.sendKeys("natcole89@gmail.com");
@@ -99,7 +97,7 @@ public class WebTableTests {
     }
     @After
     public void tearDown(){
-        //driver.quit();
+        driver.quit();
     }
 
 }
